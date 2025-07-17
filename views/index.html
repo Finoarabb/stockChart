@@ -1,0 +1,24 @@
+<!-- views/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stock Chart Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/index.js" defer></script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <h1>Live Stock Chart</h1>
+  <p class="instructions">Stocks Other people add will show up here in real time - four stocks maximum - to remove a stock click the label</p>
+  <canvas id="chart" width="800" height="400"></canvas>
+  <div class="chart-controls">
+    <form id="symbolForm">
+        <input type="text" required id="symbolInput"/>
+        <button type="submit">Get Stock</button>
+        <p class="note">Note: The free tier of the stock api has a maximum of five request/minute and 500 requests/day.</p>
+    </form>
+  </div>
+</body>
+</html>
